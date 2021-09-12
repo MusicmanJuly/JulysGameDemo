@@ -43,6 +43,7 @@ var p192 = false;
 var p49 = false;
 var p50 = false;
 var p51 = false;
+var p81 = false;
 
 function cheatcode()
 {
@@ -94,8 +95,15 @@ function cheatcode()
     world.completeEvent = 0;
   }
 
+  if (keyIsDown(16) && keyIsDown(81) && !p81)
+  {
+    if (world != null && world.july != null)
+      world.july.recoverHP();
+  }
+
   p192 = keyIsDown(192);
   p49 = keyIsDown(49);
   p50 = keyIsDown(50);
   p51 = keyIsDown(51);
+  p81 = keyIsDown(81);
 }
